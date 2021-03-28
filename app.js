@@ -1,7 +1,18 @@
 'use strict'
 
-express = require('express');
+const express = require('express');
 
-app = express();
+const app = express();
 
-port = 8080;
+const port = 8080;
+
+app.use(express.static('public'))
+app.use(express.static('js'))
+
+app.listen(port, (err) => {
+    console.log(`server listening on http://localhost:${port}`)
+});
+
+app.get('/', function (res,req){
+    res.sendFile('index.js')
+});

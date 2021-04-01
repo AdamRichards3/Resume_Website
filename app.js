@@ -9,7 +9,7 @@ const port = 8080;
 app.use(express.static('public'))
 app.use(express.static('js'))
 
-app.listen(port, (err) => {†
+app.listen(port, (err) => {
     console.log(`server listening on http://localhost:${port}`)
 });
 
